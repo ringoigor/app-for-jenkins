@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('DeployToTest') {
+            steps {
+                build 'DeployToTest'
+            }
+        }
+        stage('JenkinsJob1') {
+            steps {
+                build 'JenkinsJob1'
+            }
+        }
+    }
+}
